@@ -1,0 +1,7 @@
+运行环境：python3.8，pytorch1.5 cuda10 opencv3
+1.下载fer2013数据集（可在此链接下载链接：https://pan.baidu.com/s/1mOiGvRLAWEtYH8fyK_vKpg 
+提取码：d7hd ）
+2.将csv文件命名为fer2013.csv，放入目录下的fer2013文件夹
+3.运行save_image.py，将自动生成目录data，按照train和val两个目录将训练图片存储到目录下
+4.运行transfer_learn.py，用GPU训练模型（CPU速度较慢），训练好的模型将保存在主目录下（默认名为resnet0.pth）
+5.(非必须)运行camera.py，可以使用训练好的模型实时预测笔记本摄像头捕获的表情

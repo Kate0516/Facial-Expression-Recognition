@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}"/>
+    <script type="text/javascript" src="{% static "js/control.js" %}"></script>
+</head>
+<body>
+    <h1>Interact with AI!</h1>
+    <img src="{% static "images/happy.jpg" %}" alt="emoji">
+    <h2>{{ subtitle }}</h2>
+    <p>{{ rlt }}</p>
+    <input type="button" value="jump" onclick="jump()">
+    {% get_static_prefix as STATIC_PREFIX %}
+    <img id="upload" src="{{ STATIC_PREFIX }}{{ showimg }}" />
+</body>
+</html>

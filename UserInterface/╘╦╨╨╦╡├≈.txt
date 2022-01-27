@@ -1,0 +1,11 @@
+运行环境：python3.8，pytorch1.5，django3.0
+目录：template下为django的模板文件（各个页面的html）
+statics下为django加载的静态文件，包括css，images，js
+hci下为后台主体，uploadfiles用于储存用户上传或拍摄的图片
+	models为表情分析使用的预训练模型（ModelTraining部分输出的resnet0，已经放入文件夹，可替换成其他）
+	face_rec文件夹下为调用模型处理表情的python程序，由views调用
+	settings.py用于更改后台的设置，我在这里关闭了csrf中间件，设置了静态文件和存储用户图片和的目录
+	views.py用于处理请求，渲染页面
+	urls.py用于绑定url和views中的方法
+运行：python manage.py runserver [IP地址]:[端口号]
+	使用浏览器访问对应的IP地址和端口即可，文件夹下有sad，smile.jpg，可以用来测试上传图片分析表情的功能
